@@ -3,10 +3,16 @@ const express = require('express')
 const port = process.env.PORT || 8000
 const app = express()
 
+app.set('view engine', 'ejs')
+app.use(express.static('assets'))
+app.use(express.urlencoded())
 
 //routes
 app.get('/', function(req,res){
-    res.send('home page')
+    res.render('blogs.ejs')
+})
+app.get('/add', function(req,res){
+    res.render('add.ejs')
 })
 
 
