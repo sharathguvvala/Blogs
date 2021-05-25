@@ -1,19 +1,18 @@
 <%- include('./partials/header')  %>
 
 
-
-<div class="container">
-    <h2>BLOGS @ SKR</h2>
-    <div class="card" style="width:400px;">
-      <img class="card-img-top" src="" alt="Image" style="width:100%;height:250px">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <h6 class="card-title">Date</h6>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a href="#" class="btn btn-primary stretched-link">See Profile</a>
-      </div>
+<h2>BLOGS @ SKR</h2>
+<% blogs.forEach(function(blog){ %>
+    <div class="container">
+        <div class="square">
+          <img src="<%= blog.image %>" class="mask" alt="Image">
+          <div class="h1"><a href="/show/<%= blog._id %>"><%= blog.title %></a></div>
+          <h5><%= blog.date.toDateString() %></h5>
+          <p><%- blog.text.substring(0, 100) %>...</p>
+          <div><a href="/show/<%= blog._id %>" class="button">Read More</a></div>
+        </div>
     </div>
-</div>
+<% }) %>
 
 
 
