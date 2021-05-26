@@ -6,9 +6,9 @@
       <img src="<%= blog.image %>" class="mask" alt="Image">
       <div class="h1"><a href="/show/<%= blog._id %>"><%= blog.title %></a></div>
       <h5><%= blog.date.toDateString() %></h5>
-      <p><%- blog.text %></p>
+      <p><%= blog.text %></p>
       <div><a href="/edit/<%= blog._id %>" class="button">Edit</a></div>
-      <form action="/delete/<%= blog._id %>">
+      <form action="/delete/<%= blog._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
       </form>
     </div>

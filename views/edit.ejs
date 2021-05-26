@@ -1,0 +1,16 @@
+<%- include('./partials/header')  %>
+
+
+<h2>BLOGS @ SKR</h2>
+<h4>Edit <%= blog.title %> </h4>
+<form action="/update/<%= blog._id %>?_method=PUT" method="POST">      
+    <input name="title" type="text" class="feedback-input" value="<%= blog.title %>"/>   
+    <input name="image" type="text" class="feedback-input" value="<%= blog.image %>"/>
+    <textarea name="text" class="feedback-input"><%= blog.text %></textarea>
+    <input type="submit" value="SUBMIT"/>
+</form>
+
+
+
+
+<%- include('./partials/footer')  %>
