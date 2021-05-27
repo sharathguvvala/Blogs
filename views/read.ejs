@@ -8,8 +8,8 @@
       <h5><%= blog.date.toDateString() %></h5>
       <p><%= blog.text %></p>
       <div><a href="/edit/<%= blog._id %>" class="button">Edit</a></div>
-      <form action="/delete/<%= blog._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
+      <form action="/delete/<%= blog._id %>?_method=DELETE" method="POST" style="max-width: 0px; margin: 0px;">
+        <button type="submit" class="buttond">Delete</button>
       </form>
     </div>
 </div>

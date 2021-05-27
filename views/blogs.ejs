@@ -5,7 +5,9 @@
 <% blogs.forEach(function(blog){ %>
     <div class="container">
         <div class="square">
-          <img src="<%= blog.image %>" class="mask" alt="Image">
+          <div>
+            <img src="<%= blog.image %>" alt="Image">
+          </div>
           <div class="h1"><a href="/show/<%= blog._id %>"><%= blog.title %></a></div>
           <h5><%= blog.date.toDateString() %></h5>
           <p><%- blog.text.substring(0, 100) %>...</p>
