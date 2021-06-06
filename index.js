@@ -107,6 +107,11 @@ app.delete("/delete/:id", function(req, res){
     })
 })
 
+//profile route
+app.get('/profile', function(req,res){
+    res.render('profile.ejs')
+})
+
 //running server
 app.listen(port, function(err){
     if(err){

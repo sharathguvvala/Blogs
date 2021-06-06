@@ -8,6 +8,10 @@ h5{
 body{
   background-color: lightgray;
 }
+h4{
+  text-align: center;
+  color: #CC6666;
+}
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 form { max-width:70%; margin:50px auto; }
@@ -78,7 +82,6 @@ img{
   margin: auto;
   text-align: left;
   padding-left: 30px;
-  
   font-family: 'Merriweather', serif;
   font-size: 24px;
 }
@@ -142,4 +145,123 @@ a:hover{
 text-decoration: none;
 color: black;
 background-color:rgb(218, 59, 91);
+}
+.profile-card{
+  width: 300px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  position: relative;
+  margin: auto;
+  background: rgba(255,255,255,1);
+  margin-top: 10vh;
+}
+.profile-card header{
+  display: block;
+  position: relative;
+  background: rgba(255,255,255,1);
+  text-align: center;
+  padding: 30px 0 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+.profile-card header:before{
+  content: "";
+  position: absolute;
+  background: url('http://ali.shahab.pk/blur.php?img=http://ali.shahab.pk/ali-shahab.jpg&x=60') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  
+}
+.profile-card header:after{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 100%
+  );
+}
+.profile-card header img{
+  border-radius: 100%;
+  overflow: hidden;
+  width: 150px;
+  /*border: 1px solid rgba(255,255,255,.5);*/
+  box-shadow: 0 1px 0 rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.1);
+}
+.profile-card header h1{
+  font-weight: 200;
+  font-size: 42px;
+  color: #444;
+  letter-spacing: -3px;
+  margin: 0;
+  padding: 0;
+}
+.profile-card header h2{
+  font-weight: 400;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: .5px;
+  margin: 0;
+  padding: 0;
+}
+.profile-card .profile-bio{
+  text-align: center;
+  color: #888;
+}
+.profile-card .profile-bio #bio{
+  text-align: center;
+  padding: 0px 20px;
+  line-height: 24px;
+  margin: 0px;
+}
+.profile-card .profile-social-links{
+  display: table;
+  width: 70%;
+  margin: 20px auto;
+}
+.profile-card .profile-social-links li{
+  display: table-cell;
+  width: 33.3333333333333333%
+}
+.profile-card .profile-social-links li a{
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 100%;
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+.profile-card .profile-social-links li a:hover{
+  box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+  background-color: lightgray;
+}
+.profile-card .profile-social-links li a:active{
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+  background-color: lightgray;
+}
+.profile-card .profile-social-links li a i{
+  font-size: 30px;
+  display: block;
+}
+.fa-github{
+  color: #444;
+}
+.fa-instagram{
+  color: #1024da;
+}
+.fa-twitter{
+  color: rgb(22, 156, 245);
 }
